@@ -12,6 +12,7 @@ The same project is built with each of these techniques. You'll find one folder 
 
 * [Instructions](#instructions)
 * [Creator](#creators)
+* [Student](#student)
 
 ## Instructions
 
@@ -23,3 +24,10 @@ There are no special instructions for this project.
 
 * [https://twitter.com/richardkalehoff](https://twitter.com/richardkalehoff)
 * [https://github.com/richardkalehoff](https://github.com/richardkalehoff)
+
+## Student
+
+**Tamer Maarouf**
+
+* [https://twitter.com/tamermaarouf](https://twitter.com/tamermaarouf)
+* [https://github.com/tamermaarouf](https://github.com/tamermaarouf)
