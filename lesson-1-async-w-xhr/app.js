@@ -8,17 +8,26 @@
         e.preventDefault();
         responseContainer.innerHTML = '';
         searchedForText = searchField.value;
-    });
-const searchedForText = 'hippos';
-const unsplashRequest = new XMLHttpRequest();
-unsplashRequest.open('GET', `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`);
-unsplashRequest.onload = addImage;
-unsplashRequest.setRequestHeader('Authorization', 'WYl48orpG-39aMBtEcQxFUU-IVg_ljidN8ul4fFxzhM');
-unsplashRequest.send();
+        console.log('click', searchedForText)
+        });
+    // const searchedForText = 'hippos';
+    const unsplashRequest = new XMLHttpRequest();
+    unsplashRequest.open('GET', `https://api.unsplash.com/search/photos?query=${searchedForText}&client_id=WYl48orpG-39aMBtEcQxFUU-IVg_ljidN8ul4fFxzhM`);
+    unsplashRequest.onload = addImage;
+    unsplashRequest.setRequestHeader('Authorization', 'client-ID=WYl48orpG-39aMBtEcQxFUU-IVg_ljidN8ul4fFxzhM');
+    unsplashRequest.send();
 
-function addImage(){
-    
-}
+    function addImage(){
+        let htmlContent = '';
+        const data = JSON.parse(unsplashRequest.responseText);
+        console.log('results', data.results[0]);
+        const firstImage = data.results[0];
+        htmlContent = ` <figure>
+        <img src="${firstImage.urls.regular}" alt="${searchedForText}">
+        <figcaption>${searchedForText} by ${firstImage.user.name}</figcaption>
+      </figure> `;
+      responseContainer.insertAdjacentHTML('afterbegin', htmlContent);
+    }
 })();
 
 
