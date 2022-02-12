@@ -45,7 +45,7 @@
                 ).join('') + '</ul>'
             responseContainer.insertAdjacentHTML('beforeend', htmlContent);
         }else {
-            console.log('no data found')
+            console.log('no data found');
         }
     }
     });
