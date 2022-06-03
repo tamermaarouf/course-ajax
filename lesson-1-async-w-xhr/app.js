@@ -67,6 +67,7 @@
                 </li>`
                 ).join('') + '</ul>'
             responseContainer.insertAdjacentHTML('beforeend', htmlContent);
+            console.log('results article', article.response);
         } else {
             console.log('no data found');
         }
